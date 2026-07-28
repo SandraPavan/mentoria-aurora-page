@@ -133,12 +133,12 @@
         }
     </style>
 </head>
-<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<body id="top" class="bg-background text-on-surface font-body-md overflow-x-hidden">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-surface-white/90 shadow-sm glass-nav">
 <div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
-<div class="flex items-center gap-2"><img alt="QAfinity Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAClEFTrwSHT9jBuvNjijBcB3CKWCNXQIcmPMp6bouqeFAjxSVfyDQOx9N7fKnyUeay-K0OZDN56YnbyKE2UzsCSIT8DShB3LvxfcRLMRykHOihQAjXq2wjTLKPY_MW0uO3QN9xIbJwsD5zwcbD0liM9TeOXsDgIajcdS-Sl4XtXO4Y7ZHWWflRwoc9QjS4_Ps0QshXxq-_7l7NSsL2ei7zzQXm7x2wyj1qFXe6rRKQLgkFcuRNTOTxT1ed1vlwxsyB0Py8_PE"><div class="w-px h-6 bg-outline-variant mx-2"></div><span class="font-headline-md text-lg text-primary tracking-tight">Mentoria Aurora</span></div>
-<div class="hidden md:flex gap-8 items-center"><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[16px]" href="#beneficios">Benefícios</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[16px]" href="#mentorias">Mentoras</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[16px]" href="#curriculo">Currículo</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[16px]" href="#depoimentos">Depoimentos</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[16px]" href="#faq">FAQ</a><a href="https://calendly.com/sandrapavan38/vem-conhecer" class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-semibold pill-shadow transition-all inline-block">Agendar Mentoria</a></div>
+<a href="#top" class="flex items-center gap-2 hover:opacity-80 transition-opacity"><img alt="QAfinity Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAClEFTrwSHT9jBuvNjijBcB3CKWCNXQIcmPMp6bouqeFAjxSVfyDQOx9N7fKnyUeay-K0OZDN56YnbyKE2UzsCSIT8DShB3LvxfcRLMRykHOihQAjXq2wjTLKPY_MW0uO3QN9xIbJwsD5zwcbD0liM9TeOXsDgIajcdS-Sl4XtXO4Y7ZHWWflRwoc9QjS4_Ps0QshXxq-_7l7NSsL2ei7zzQXm7x2wyj1qFXe6rRKQLgkFcuRNTOTxT1ed1vlwxsyB0Py8_PE"><div class="w-px h-6 bg-outline-variant mx-2"></div><span class="font-headline-md text-lg text-primary tracking-tight">Mentoria Aurora</span></a>
+<div class="hidden md:flex gap-8 items-center"><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[16px]" href="#beneficios">Benefícios</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[16px]" href="#mentorias">Mentoras</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[16px]" href="#curriculo">Currículo</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[16px]" href="#depoimentos">Depoimentos</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[16px]" href="#faq">FAQ</a><a href="https://calendly.com/sandrapavan38/vem-conhecer" target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-semibold pill-shadow transition-all inline-block">Agendar Mentoria</a></div>
 <button class="md:hidden text-primary" id="mobile-menu-btn">
 <span class="material-symbols-outlined">menu</span>
 </button>
@@ -154,8 +154,8 @@
                     Uma mentoria desenhada para QAs que buscam o próximo nível, unindo estratégia organizacional e domínio técnico para transformar potencial em liderança.
                 </p>
 <div class="flex flex-col sm:flex-row gap-4">
-<a href="https://calendly.com/sandrapavan38/vem-conhecer" class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold text-lg pill-shadow transition-all text-center inline-block">Agendar uma conversa</a>
-<button class="border-2 border-tech-teal text-tech-teal px-8 py-4 rounded-full font-bold text-lg hover:bg-tech-teal/5 transition-all text-center" style="opacity: 1;">Conhecer a mentoria</button>
+<a href="https://calendly.com/sandrapavan38/vem-conhecer" target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold text-lg pill-shadow transition-all text-center inline-block">Agendar uma conversa</a>
+<a href="#uma-mentoria-que-fala-a-sua-lingua" class="border-2 border-tech-teal text-tech-teal px-8 py-4 rounded-full font-bold text-lg hover:bg-tech-teal/5 transition-all text-center inline-block" style="opacity: 1;">Conhecer a mentoria</a>
 </div>
 </div>
 <div class="relative">
@@ -201,7 +201,7 @@
 </div>
 </section>
 <!-- O Que É Section -->
-<section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter bg-surface-white overflow-hidden">
+<section id="uma-mentoria-que-fala-a-sua-lingua" class="py-section-padding-mobile md:py-section-padding-desktop px-gutter bg-surface-white overflow-hidden">
 <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 <div class="order-2 md:order-1">
 <div class="grid grid-cols-2 gap-4">
@@ -464,7 +464,7 @@
 <p class="font-body-lg text-body-lg mb-12 opacity-90 max-w-2xl mx-auto">
                 O primeiro passo para a sua transformação é uma conversa sem compromisso. Clique no botão abaixo e agende o melhor horário.
             </p>
-<a href="https://calendly.com/sandrapavan38/vem-conhecer" class="bg-surface-white text-primary px-12 py-5 rounded-full font-extrabold text-xl hover:scale-105 transition-all shadow-2xl inline-block">
+<a href="https://calendly.com/sandrapavan38/vem-conhecer" target="_blank" rel="noopener noreferrer" class="bg-surface-white text-primary px-12 py-5 rounded-full font-extrabold text-xl hover:scale-105 transition-all shadow-2xl inline-block">
                 Agendar minha conversa inicial
             </a>
 <p class="mt-6 text-sm font-label-sm opacity-70 uppercase tracking-widest">Vagas Limitadas por Ciclo</p>
