@@ -102,6 +102,33 @@
         }
     </script>
 <style>
+        :root {
+            color-scheme: light;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Open Sans', 'Segoe UI', Roboto, Arial, sans-serif;
+            font-size: 1rem;
+            line-height: 1.7;
+            letter-spacing: 0.01em;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Manrope', 'Segoe UI', sans-serif;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+        }
+
+        p, li {
+            max-width: 70ch;
+        }
+
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
@@ -130,6 +157,10 @@
         }
         @media (max-width: 768px) {
             .step-line::after { display: none; }
+            body {
+                font-size: 1rem;
+                line-height: 1.7;
+            }
         }
     </style>
 </head>
@@ -168,8 +199,8 @@
 <span class="material-symbols-outlined">trending_up</span>
 </div>
 <div>
-<p class="text-[14px] font-bold">Crescimento Acelerado</p>
-<p class="text-[12px] text-on-surface-variant">Próximo passo definido</p>
+<p class="text-[15px] font-bold">Crescimento Acelerado</p>
+<p class="text-[14px] text-on-surface-variant">Próximo passo definido</p>
 </div>
 </div>
 </div>
@@ -208,7 +239,7 @@
 <div class="space-y-4">
 <div class="h-40 bg-strategic-purple/10 rounded-2xl p-6 flex flex-col justify-end">
 <span class="text-strategic-purple font-bold">01</span>
-<p class="text-sm font-semibold">Customizada</p>
+<p class="text-base font-semibold">Customizada</p>
 </div>
 <div class="h-64 relative rounded-2xl overflow-hidden">
 <img class="w-full h-full object-cover" data-alt="Close-up of a high-quality leather planner with handwritten notes about software testing strategy and professional milestones. The desk is minimalist with a coffee cup and soft evening light, representing the personalized and reflective nature of the Aurora mentorship process. The color palette emphasizes deep purples and warm whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2Gt-TdsGPcdedSf6rapt9d9pjwhi21P_8qC_I1OnInL5p2ZtIl5pVlk-nytEqS3iJTaSIbMe1hYNAJx3NH9vhRO4C1f2yY4F5wv16oA2gOH4QWXgCYolxiaffita3FJ10YCcgDKagVNzFV6Z1CPchBm9me4VVDc33wYowUDw9tcVHYks5noKM0CfdH-e912hsGOpArG2kVhZK2RGb-JWgeoNLM1QvbupogqDgYYD2nj9ScJ4K">
@@ -220,7 +251,7 @@
 </div>
 <div class="h-40 bg-tech-teal/10 rounded-2xl p-6 flex flex-col justify-end">
 <span class="text-tech-teal font-bold">02</span>
-<p class="text-sm font-semibold">Duo Expertise</p>
+<p class="text-base font-semibold">Duo Expertise</p>
 </div>
 </div>
 </div>
@@ -268,7 +299,7 @@
 </div>
 <div class="flex-1 bg-surface-muted rounded-2xl p-6">
 <h4 class="font-label-sm uppercase mb-4 opacity-60">Resultados Esperados</h4>
-<ul class="space-y-3 text-sm">
+<ul class="space-y-3 text-base">
 <li class="flex gap-2"><span class="">🚀</span> Identificação de Gaps</li>
 <li class="flex gap-2"><span class="">🎯</span> Definição de Especialidade</li>
 <li class="flex gap-2"><span class="">💡</span> Awareness Profissional</li>
@@ -372,21 +403,21 @@
 <div class="text-primary"><span class="material-symbols-outlined text-32px">school</span></div>
 <div>
 <h4 class="font-bold text-lg mb-1">QAs Juniors e Plenos</h4>
-<p class="text-sm text-on-surface-variant">Que buscam acelerar o aprendizado e conquistar cargos de maior responsabilidade e salário.</p>
+<p class="text-base text-on-surface-variant">Que buscam acelerar o aprendizado e conquistar cargos de maior responsabilidade e salário.</p>
 </div>
 </div>
 <div class="flex gap-4 p-6 bg-surface-white rounded-2xl shadow-sm">
 <div class="text-tech-teal"><span class="material-symbols-outlined text-32px">engineering</span></div>
 <div>
 <h4 class="font-bold text-lg mb-1">QAs Seniors</h4>
-<p class="text-sm text-on-surface-variant">Que desejam se tornar Tech Leads ou focar em arquitetura de qualidade e estratégia corporativa.</p>
+<p class="text-base text-on-surface-variant">Que desejam se tornar Tech Leads ou focar em arquitetura de qualidade e estratégia corporativa.</p>
 </div>
 </div>
 <div class="flex gap-4 p-6 bg-surface-white rounded-2xl shadow-sm">
 <div class="text-strategic-purple"><span class="material-symbols-outlined text-32px">groups</span></div>
 <div>
 <h4 class="font-bold text-lg mb-1">Lideranças em Transição</h4>
-<p class="text-sm text-on-surface-variant">Gestores que precisam aprofundar o conhecimento técnico e estratégico para liderar times de QA modernos.</p>
+<p class="text-base text-on-surface-variant">Gestores que precisam aprofundar o conhecimento técnico e estratégico para liderar times de QA modernos.</p>
 </div>
 </div>
 </div>
@@ -412,7 +443,7 @@
 <span class="font-bold text-xl">1</span>
 </div>
 <h4 class="font-bold mb-2">Conversa Inicial</h4>
-<p class="text-sm text-on-surface-variant px-4">Alinhamento de expectativas e fit cultural.</p>
+<p class="text-base text-on-surface-variant px-4">Alinhamento de expectativas e fit cultural.</p>
 </div>
 <!-- Step 2 -->
 <div class="flex-1 text-center group relative z-10 w-full">
@@ -420,7 +451,7 @@
 <span class="font-bold text-xl">2</span>
 </div>
 <h4 class="font-bold mb-2">Diagnóstico</h4>
-<p class="text-sm text-on-surface-variant px-4">Mapeamento profundo das suas habilidades.</p>
+<p class="text-base text-on-surface-variant px-4">Mapeamento profundo das suas habilidades.</p>
 </div>
 <!-- Step 3 -->
 <div class="flex-1 text-center group relative z-10 w-full">
@@ -428,7 +459,7 @@
 <span class="font-bold text-xl">3</span>
 </div>
 <h4 class="font-bold mb-2">Plano</h4>
-<p class="text-sm text-on-surface-variant px-4">Criação do seu roadmap personalizado.</p>
+<p class="text-base text-on-surface-variant px-4">Criação do seu roadmap personalizado.</p>
 </div>
 <!-- Step 4 -->
 <div class="flex-1 text-center group relative z-10 w-full">
@@ -436,7 +467,7 @@
 <span class="font-bold text-xl">4</span>
 </div>
 <h4 class="font-bold mb-2">Mentorias</h4>
-<p class="text-sm text-on-surface-variant px-4">Encontros focados em execução e estratégia.</p>
+<p class="text-base text-on-surface-variant px-4">Encontros focados em execução e estratégia.</p>
 </div>
 <!-- Step 5 -->
 <div class="flex-1 text-center group relative z-10 w-full">
@@ -444,17 +475,17 @@
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
 </div>
 <h4 class="font-bold mb-2">Evolução</h4>
-<p class="text-sm text-on-surface-variant px-4">Sua nova fase profissional consolidada.</p>
+<p class="text-base text-on-surface-variant px-4">Sua nova fase profissional consolidada.</p>
 </div>
 </div>
 </div>
-</section><section id="curriculo" class="py-section-padding-mobile md:py-section-padding-desktop px-gutter bg-surface-container-low"><div class="max-w-container-max mx-auto"><div class="text-center mb-16"><h2 class="font-headline-md text-headline-md mb-4">O que você pode desenvolver</h2><p class="text-on-surface-variant">Tópicos personalizados de acordo com o seu momento de carreira.</p></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div class="bg-surface-white p-6 rounded-2xl shadow-sm border border-outline-variant flex items-start gap-4"><span class="material-symbols-outlined text-primary">strategy</span><div><h4 class="font-bold mb-1">Estratégia e Planejamento</h4><p class="text-sm text-on-surface-variant">Estratégia de Qualidade e Planejamento de Testes.</p></div></div><div class="bg-surface-white p-6 rounded-2xl shadow-sm border border-outline-variant flex items-start gap-4"><span class="material-symbols-outlined text-primary">code</span><div><h4 class="font-bold mb-1">Técnico e Automação</h4><p class="text-sm text-on-surface-variant">Automação, API Testing e Engenharia de Qualidade.</p></div></div><div class="bg-surface-white p-6 rounded-2xl shadow-sm border border-outline-variant flex items-start gap-4"><span class="material-symbols-outlined text-primary">terminal</span><div><h4 class="font-bold mb-1">DevOps e CI/CD</h4><p class="text-sm text-on-surface-variant">Integração contínua e entrega de valor.</p></div></div><div class="bg-surface-white p-6 rounded-2xl shadow-sm border border-outline-variant flex items-start gap-4"><span class="material-symbols-outlined text-primary">groups</span><div><h4 class="font-bold mb-1">Liderança e Gestão</h4><p class="text-sm text-on-surface-variant">Liderança Técnica, Comunicação e Gestão de Qualidade.</p></div></div><div class="bg-surface-white p-6 rounded-2xl shadow-sm border border-outline-variant flex items-start gap-4"><span class="material-symbols-outlined text-primary">person_pin</span><div><h4 class="font-bold mb-1">Carreira e Branding</h4><p class="text-sm text-on-surface-variant">Plano de Carreira e Posicionamento Profissional.</p></div></div><div class="bg-surface-white p-6 rounded-2xl shadow-sm border border-outline-variant flex items-start gap-4"><span class="material-symbols-outlined text-primary">work_history</span><div><h4 class="font-bold mb-1">Mercado e Prática</h4><p class="text-sm text-on-surface-variant">Preparação para entrevistas e Casos reais do mercado.</p></div></div></div></div></section>
+</section><section id="curriculo" class="py-section-padding-mobile md:py-section-padding-desktop px-gutter bg-surface-container-low"><div class="max-w-container-max mx-auto"><div class="text-center mb-16"><h2 class="font-headline-md text-headline-md mb-4">O que você pode desenvolver</h2><p class="text-on-surface-variant">Tópicos personalizados de acordo com o seu momento de carreira.</p></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div class="bg-surface-white p-6 rounded-2xl shadow-sm border border-outline-variant flex items-start gap-4"><span class="material-symbols-outlined text-primary">strategy</span><div><h4 class="font-bold mb-1">Estratégia e Planejamento</h4><p class="text-base text-on-surface-variant">Estratégia de Qualidade e Planejamento de Testes.</p></div></div><div class="bg-surface-white p-6 rounded-2xl shadow-sm border border-outline-variant flex items-start gap-4"><span class="material-symbols-outlined text-primary">code</span><div><h4 class="font-bold mb-1">Técnico e Automação</h4><p class="text-sm text-on-surface-variant">Automação, API Testing e Engenharia de Qualidade.</p></div></div><div class="bg-surface-white p-6 rounded-2xl shadow-sm border border-outline-variant flex items-start gap-4"><span class="material-symbols-outlined text-primary">terminal</span><div><h4 class="font-bold mb-1">DevOps e CI/CD</h4><p class="text-sm text-on-surface-variant">Integração contínua e entrega de valor.</p></div></div><div class="bg-surface-white p-6 rounded-2xl shadow-sm border border-outline-variant flex items-start gap-4"><span class="material-symbols-outlined text-primary">groups</span><div><h4 class="font-bold mb-1">Liderança e Gestão</h4><p class="text-sm text-on-surface-variant">Liderança Técnica, Comunicação e Gestão de Qualidade.</p></div></div><div class="bg-surface-white p-6 rounded-2xl shadow-sm border border-outline-variant flex items-start gap-4"><span class="material-symbols-outlined text-primary">person_pin</span><div><h4 class="font-bold mb-1">Carreira e Branding</h4><p class="text-sm text-on-surface-variant">Plano de Carreira e Posicionamento Profissional.</p></div></div><div class="bg-surface-white p-6 rounded-2xl shadow-sm border border-outline-variant flex items-start gap-4"><span class="material-symbols-outlined text-primary">work_history</span><div><h4 class="font-bold mb-1">Mercado e Prática</h4><p class="text-sm text-on-surface-variant">Preparação para entrevistas e Casos reais do mercado.</p></div></div></div></div></section>
 <!-- Temas Section -->
 
 <!-- FAQ Section -->
 
 <!-- CTA Final Section -->
-<section id="faq" class="py-section-padding-mobile md:py-section-padding-desktop px-gutter bg-surface-white"><div class="max-w-4xl mx-auto"><div class="text-center mb-16"><h2 class="font-headline-md text-headline-md mb-4">Perguntas Frequentes</h2><p class="text-on-surface-variant">Tire suas principais dúvidas sobre a Mentoria Aurora.</p></div><div class="space-y-4"><div class="border border-outline-variant rounded-2xl p-6"><h4 class="font-bold mb-2">Preciso saber automação?</h4><p class="text-on-surface-variant text-sm">Não é obrigatório. Adaptamos o plano técnico ao seu nível atual, seja você iniciante ou avançado em automação.</p></div><div class="border border-outline-variant rounded-2xl p-6"><h4 class="font-bold mb-2">Os encontros são online?</h4><p class="text-on-surface-variant text-sm">Sim, todos os encontros são realizados via vídeo chamada em horários flexíveis agendados previamente.</p></div><div class="border border-outline-variant rounded-2xl p-6"><h4 class="font-bold mb-2">Posso escolher os assuntos?</h4><p class="text-on-surface-variant text-sm">Com certeza. A mentoria é personalizada para focar exatamente nos gaps que você deseja preencher.</p></div><div class="border border-outline-variant rounded-2xl p-6"><h4 class="font-bold mb-2">A mentoria é indicada para iniciantes?</h4><p class="text-on-surface-variant text-sm">Sim, temos uma trilha específica para QAs Juniors que desejam acelerar sua curva de aprendizado.</p></div><div class="border border-outline-variant rounded-2xl p-6"><h4 class="font-bold mb-2">Como descubro qual jornada faz mais sentido para mim?</h4><p class="text-on-surface-variant text-sm">Na nossa conversa inicial gratuita, fazemos um pré-diagnóstico para entender seus objetivos e recomendar o melhor caminho.</p></div></div></div></section><section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter bg-primary text-on-primary text-center relative overflow-hidden">
+<section id="faq" class="py-section-padding-mobile md:py-section-padding-desktop px-gutter bg-surface-white"><div class="max-w-4xl mx-auto"><div class="text-center mb-16"><h2 class="font-headline-md text-headline-md mb-4">Perguntas Frequentes</h2><p class="text-on-surface-variant">Tire suas principais dúvidas sobre a Mentoria Aurora.</p></div><div class="space-y-4"><div class="border border-outline-variant rounded-2xl p-6"><h4 class="font-bold mb-2">Preciso saber automação?</h4><p class="text-on-surface-variant text-base">Não é obrigatório. Adaptamos o plano técnico ao seu nível atual, seja você iniciante ou avançado em automação.</p></div><div class="border border-outline-variant rounded-2xl p-6"><h4 class="font-bold mb-2">Os encontros são online?</h4><p class="text-on-surface-variant text-sm">Sim, todos os encontros são realizados via vídeo chamada em horários flexíveis agendados previamente.</p></div><div class="border border-outline-variant rounded-2xl p-6"><h4 class="font-bold mb-2">Posso escolher os assuntos?</h4><p class="text-on-surface-variant text-sm">Com certeza. A mentoria é personalizada para focar exatamente nos gaps que você deseja preencher.</p></div><div class="border border-outline-variant rounded-2xl p-6"><h4 class="font-bold mb-2">A mentoria é indicada para iniciantes?</h4><p class="text-on-surface-variant text-sm">Sim, temos uma trilha específica para QAs Juniors que desejam acelerar sua curva de aprendizado.</p></div><div class="border border-outline-variant rounded-2xl p-6"><h4 class="font-bold mb-2">Como descubro qual jornada faz mais sentido para mim?</h4><p class="text-on-surface-variant text-sm">Na nossa conversa inicial gratuita, fazemos um pré-diagnóstico para entender seus objetivos e recomendar o melhor caminho.</p></div></div></div></section><section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter bg-primary text-on-primary text-center relative overflow-hidden">
 <div class="absolute inset-0 opacity-10">
 <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2"></div>
 <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary-fixed rounded-full blur-[100px] translate-x-1/2 translate-y-1/2"></div>
@@ -467,7 +498,7 @@
 <a href="https://calendly.com/sandrapavan38/vem-conhecer" target="_blank" rel="noopener noreferrer" class="bg-surface-white text-primary px-12 py-5 rounded-full font-extrabold text-xl hover:scale-105 transition-all shadow-2xl inline-block">
                 Agendar minha conversa inicial
             </a>
-<p class="mt-6 text-sm font-label-sm opacity-70 uppercase tracking-widest">Vagas Limitadas por Ciclo</p>
+<p class="mt-6 text-base font-label-sm opacity-70 uppercase tracking-widest">Vagas Limitadas por Ciclo</p>
 </div>
 </section>
 <!-- Footer -->
@@ -475,8 +506,8 @@
 <div class="grid grid-cols-1 gap-base px-gutter max-w-container-max mx-auto">
 <div class="col-span-1 md:col-span-1 mx-auto text-center flex flex-col items-center">
 <div class="flex items-center gap-2 mb-6"><img alt="QAfinity Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAClEFTrwSHT9jBuvNjijBcB3CKWCNXQIcmPMp6bouqeFAjxSVfyDQOx9N7fKnyUeay-K0OZDN56YnbyKE2UzsCSIT8DShB3LvxfcRLMRykHOihQAjXq2wjTLKPY_MW0uO3QN9xIbJwsD5zwcbD0liM9TeOXsDgIajcdS-Sl4XtXO4Y7ZHWWflRwoc9QjS4_Ps0QshXxq-_7l7NSsL2ei7zzQXm7x2wyj1qFXe6rRKQLgkFcuRNTOTxT1ed1vlwxsyB0Py8_PE"><div class="w-px h-5 bg-outline-variant mx-2"></div><span class="font-headline-md text-base text-primary tracking-tight">Mentoria Aurora</span></div>
-<a href="#top" class="text-sm text-primary hover:opacity-80 transition-opacity mb-4">Voltar ao topo</a>
-<p class="text-on-surface-variant text-sm mb-6">Mentoria especializada em elevar a carreira de profissionais de Quality Assurance no Brasil e no mundo.</p>
+<a href="#top" class="text-base text-primary hover:opacity-80 transition-opacity mb-4">Voltar ao topo</a>
+<p class="text-on-surface-variant text-base mb-6">Mentoria especializada em elevar a carreira de profissionais de Quality Assurance no Brasil e no mundo.</p>
 </div>
 
 
