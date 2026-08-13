@@ -145,18 +145,19 @@
             box-shadow: 0 10px 25px -5px rgba(125, 42, 232, 0.3);
             transform: translateY(-2px);
         }
-        .step-line::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 100%;
-            width: 100%;
-            height: 2px;
-            background: repeating-linear-gradient(to right, #cdc2d8 0, #cdc2d8 4px, transparent 4px, transparent 8px);
-            z-index: -1;
+        @media (min-width: 1280px) {
+            .journey-steps::before {
+                content: '';
+                position: absolute;
+                top: 32px;
+                left: 10%;
+                right: 10%;
+                height: 2px;
+                background: repeating-linear-gradient(to right, #cdc2d8 0, #cdc2d8 4px, transparent 4px, transparent 8px);
+                z-index: 0;
+            }
         }
         @media (max-width: 768px) {
-            .step-line::after { display: none; }
             body {
                 font-size: 1rem;
                 line-height: 1.7;
@@ -196,11 +197,22 @@
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-surface-white/90 shadow-sm glass-nav">
 <div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
-<a href="#top" class="flex items-center gap-2 hover:opacity-80 transition-opacity"><img alt="QAfinity Logo" class="h-10 w-auto object-contain" src="assets/logos/qafinity.png" width="1100" height="320"><div class="w-px h-6 bg-outline-variant mx-2"></div><span class="font-headline-md text-lg text-primary tracking-tight">Mentoria Aurora</span></a>
-<div class="hidden md:flex gap-8 items-center"><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[16px]" href="#curriculo">Desenvolvimento</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[16px]" href="#beneficios">Benefícios</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[16px]" href="#como-funciona">Como funciona</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[16px]" href="#formatos">Formatos</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[16px]" href="#mentorias">Mentoras</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[16px]" href="#faq">FAQ</a><a href="https://calendly.com/sandrapavan38/vem-conhecer" target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-semibold pill-shadow transition-all inline-block">Agendar Mentoria</a></div>
-<button class="md:hidden text-primary" id="mobile-menu-btn">
+<a href="#top" class="flex items-center gap-2 min-w-0 hover:opacity-80 transition-opacity"><img alt="QAfinity Logo" class="h-9 sm:h-10 w-auto max-w-[132px] sm:max-w-[150px] object-contain" src="assets/logos/qafinity.png" width="1100" height="320"><div class="hidden sm:block xl:hidden 2xl:block w-px h-6 bg-outline-variant mx-1"></div><span class="hidden sm:block xl:hidden 2xl:block font-headline-md text-base text-primary tracking-tight whitespace-nowrap">Mentoria Aurora</span></a>
+<div class="hidden xl:flex gap-4 2xl:gap-7 items-center whitespace-nowrap"><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[15px] 2xl:text-[16px]" href="#curriculo">Desenvolvimento</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[15px] 2xl:text-[16px]" href="#beneficios">Benefícios</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[15px] 2xl:text-[16px]" href="#como-funciona">Como funciona</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[15px] 2xl:text-[16px]" href="#formatos">Formatos</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[15px] 2xl:text-[16px]" href="#mentorias">Mentoras</a><a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-title-lg text-[15px] 2xl:text-[16px]" href="#faq">FAQ</a><a href="https://calendly.com/sandrapavan38/vem-conhecer" target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary px-5 2xl:px-6 py-2.5 rounded-full font-semibold pill-shadow transition-all inline-block whitespace-nowrap">Agendar Mentoria</a></div>
+<button class="xl:hidden text-primary p-2 -mr-2" id="mobile-menu-btn" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-menu">
 <span class="material-symbols-outlined">menu</span>
 </button>
+</div>
+<div class="hidden xl:hidden border-t border-outline-variant bg-surface-white px-gutter py-4 shadow-sm" id="mobile-menu">
+<div class="max-w-container-max mx-auto flex flex-col gap-1">
+<a class="py-3 text-on-surface-variant hover:text-primary font-semibold" href="#curriculo">Desenvolvimento</a>
+<a class="py-3 text-on-surface-variant hover:text-primary font-semibold" href="#beneficios">Benefícios</a>
+<a class="py-3 text-on-surface-variant hover:text-primary font-semibold" href="#como-funciona">Como funciona</a>
+<a class="py-3 text-on-surface-variant hover:text-primary font-semibold" href="#formatos">Formatos</a>
+<a class="py-3 text-on-surface-variant hover:text-primary font-semibold" href="#mentorias">Mentoras</a>
+<a class="py-3 text-on-surface-variant hover:text-primary font-semibold" href="#faq">FAQ</a>
+<a href="https://calendly.com/sandrapavan38/vem-conhecer" target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary px-6 py-3 mt-2 rounded-full font-semibold text-center">Agendar Mentoria</a>
+</div>
 </div>
 </nav>
 <!-- Hero Section -->
@@ -318,21 +330,21 @@
 <p class="text-on-surface-variant mb-10 text-lg">Buscamos profissionais comprometidos com a própria evolução e que desejam sair da zona de conforto.</p>
 <div class="space-y-6">
 <div class="flex gap-4 p-6 bg-surface-white rounded-2xl shadow-sm">
-<div class="text-primary"><span class="material-symbols-outlined text-32px">school</span></div>
+<div class="text-primary"><span class="material-symbols-outlined text-[32px]">school</span></div>
 <div>
 <h4 class="font-bold text-lg mb-1">QAs Juniors e Plenos</h4>
 <p class="text-base text-on-surface-variant">Que buscam acelerar o aprendizado e conquistar cargos de maior responsabilidade e salário.</p>
 </div>
 </div>
 <div class="flex gap-4 p-6 bg-surface-white rounded-2xl shadow-sm">
-<div class="text-tech-teal"><span class="material-symbols-outlined text-32px">engineering</span></div>
+<div class="text-tech-teal"><span class="material-symbols-outlined text-[32px]">engineering</span></div>
 <div>
 <h4 class="font-bold text-lg mb-1">QAs Seniors</h4>
 <p class="text-base text-on-surface-variant">Que desejam se tornar Tech Leads ou focar em arquitetura de qualidade e estratégia corporativa.</p>
 </div>
 </div>
 <div class="flex gap-4 p-6 bg-surface-white rounded-2xl shadow-sm">
-<div class="text-strategic-purple"><span class="material-symbols-outlined text-32px">groups</span></div>
+<div class="text-strategic-purple"><span class="material-symbols-outlined text-[32px]">groups</span></div>
 <div>
 <h4 class="font-bold text-lg mb-1">Lideranças em Transição</h4>
 <p class="text-base text-on-surface-variant">Gestores que precisam aprofundar o conhecimento técnico e estratégico para liderar times de QA modernos.</p>
@@ -362,7 +374,7 @@
 <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
 <span class="material-symbols-outlined text-3xl">analytics</span>
 </div>
-<h3 class="font-title-lg text-24px mb-4">Diagnóstico 360º Individual</h3>
+<h3 class="font-title-lg text-[24px] mb-4">Diagnóstico 360º Individual</h3>
 <p class="text-on-surface-variant">Analisamos seu perfil técnico e comportamental para identificar exatamente onde estão seus pontos de alavancagem.</p>
 </div>
 <div class="flex-1 bg-surface-muted rounded-2xl p-6">
@@ -378,14 +390,14 @@
 <div class="w-14 h-14 bg-tech-teal/10 rounded-2xl flex items-center justify-center text-tech-teal mb-6">
 <span class="material-symbols-outlined text-3xl">architecture</span>
 </div>
-<h3 class="font-title-lg text-24px mb-4">Plano Técnico Personalizado</h3>
+<h3 class="font-title-lg text-[24px] mb-4">Plano Técnico Personalizado</h3>
 <p class="text-on-surface-variant">Curadoria de conteúdos e desafios práticos focados nas ferramentas e tecnologias que o mercado exige.</p>
 </div>
 <div class="col-span-12 md:col-span-4 bg-primary text-on-primary p-10 rounded-[32px] shadow-xl">
 <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mb-6">
 <span class="material-symbols-outlined text-3xl text-white">support_agent</span>
 </div>
-<h3 class="font-title-lg text-24px mb-4">Suporte Direto</h3>
+<h3 class="font-title-lg text-[24px] mb-4">Suporte Direto</h3>
 <p class="opacity-90">Acesso às mentoras para tirar dúvidas e receber feedbacks rápidos durante todo o processo de mentoria.</p>
 </div>
 <div class="col-span-12 md:col-span-8 bg-surface-white p-10 rounded-[32px] shadow-sm border-t-4 border-strategic-purple">
@@ -394,7 +406,7 @@
 <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
 <span class="material-symbols-outlined text-3xl">badge</span>
 </div>
-<h3 class="font-title-lg text-24px mb-4">Posicionamento no Mercado</h3>
+<h3 class="font-title-lg text-[24px] mb-4">Posicionamento no Mercado</h3>
 <p class="text-on-surface-variant">Fortaleça sua presença profissional no LinkedIn, no currículo e nas entrevistas para comunicar melhor sua experiência e ampliar suas oportunidades.</p>
 </div>
 <div class="w-full md:w-48 h-48 bg-surface-muted rounded-full flex items-center justify-center border-4 border-primary/20">
@@ -412,37 +424,37 @@
 <h2 id="como-funciona-title" class="font-headline-md text-headline-md mb-4">Como funciona a jornada?</h2>
 <p class="text-on-surface-variant max-w-3xl mx-auto">A Mentoria Aurora não segue um roteiro genérico de aulas gravadas. Partimos do seu cenário para unir estratégia, prática e acompanhamento em um caminho estruturado para a sua evolução.</p>
 </div>
-<ol class="flex flex-col md:flex-row justify-between items-start gap-8 relative mb-24" aria-label="Etapas da Mentoria Aurora">
-<li class="flex-1 text-center group relative z-10 w-full">
+<ol class="journey-steps grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6 xl:gap-4 relative mb-24" aria-label="Etapas da Mentoria Aurora">
+<li class="text-center group relative z-10 w-full bg-surface-container-low md:bg-transparent rounded-2xl p-6 md:p-4 xl:px-1 xl:py-0">
 <div class="w-16 h-16 bg-surface-white border-2 border-primary text-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300 step-line"><span class="font-bold text-xl">1</span></div>
-<h3 class="font-bold mb-2">Conversa inicial</h3>
-<p class="text-base text-on-surface-variant px-4">Alinhamos expectativas, objetivos e o momento atual da sua carreira.</p>
+<h3 class="font-bold text-lg leading-6 mb-2 md:min-h-12 flex items-center justify-center">Conversa inicial</h3>
+<p class="text-base text-on-surface-variant mx-auto">Alinhamos expectativas, objetivos e o momento atual da sua carreira.</p>
 </li>
-<li class="flex-1 text-center group relative z-10 w-full">
+<li class="text-center group relative z-10 w-full bg-surface-container-low md:bg-transparent rounded-2xl p-6 md:p-4 xl:px-1 xl:py-0">
 <div class="w-16 h-16 bg-surface-white border-2 border-primary text-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300 step-line"><span class="font-bold text-xl">2</span></div>
-<h3 class="font-bold mb-2">Diagnóstico</h3>
-<p class="text-base text-on-surface-variant px-4">Mapeamos habilidades, desafios e oportunidades para definir onde você pode chegar.</p>
+<h3 class="font-bold text-lg leading-6 mb-2 md:min-h-12 flex items-center justify-center">Diagnóstico</h3>
+<p class="text-base text-on-surface-variant mx-auto">Mapeamos habilidades, desafios e oportunidades para definir onde você pode chegar.</p>
 </li>
-<li class="flex-1 text-center group relative z-10 w-full">
+<li class="text-center group relative z-10 w-full bg-surface-container-low md:bg-transparent rounded-2xl p-6 md:p-4 xl:px-1 xl:py-0">
 <div class="w-16 h-16 bg-surface-white border-2 border-primary text-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300 step-line"><span class="font-bold text-xl">3</span></div>
-<h3 class="font-bold mb-2">Plano</h3>
-<p class="text-base text-on-surface-variant px-4">Construímos um roadmap personalizado, com metas tangíveis de curto e médio prazo.</p>
+<h3 class="font-bold text-lg leading-6 mb-2 md:min-h-12 flex items-center justify-center">Plano</h3>
+<p class="text-base text-on-surface-variant mx-auto">Construímos um roadmap personalizado, com metas tangíveis de curto e médio prazo.</p>
 </li>
-<li class="flex-1 text-center group relative z-10 w-full">
+<li class="text-center group relative z-10 w-full bg-surface-container-low md:bg-transparent rounded-2xl p-6 md:p-4 xl:px-1 xl:py-0">
 <div class="w-16 h-16 bg-surface-white border-2 border-primary text-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300 step-line"><span class="font-bold text-xl">4</span></div>
-<h3 class="font-bold mb-2">Mentorias</h3>
-<p class="text-base text-on-surface-variant px-4">Trabalhamos casos reais em encontros focados em prática, execução e estratégia.</p>
+<h3 class="font-bold text-lg leading-6 mb-2 md:min-h-12 flex items-center justify-center">Mentorias</h3>
+<p class="text-base text-on-surface-variant mx-auto">Trabalhamos casos reais em encontros focados em prática, execução e estratégia.</p>
 </li>
-<li class="flex-1 text-center group relative z-10 w-full">
+<li class="text-center group relative z-10 w-full bg-surface-container-low md:bg-transparent rounded-2xl p-6 md:p-4 md:col-span-2 xl:col-span-1 xl:px-1 xl:py-0">
 <div class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"><span class="font-bold text-xl">5</span></div>
-<h3 class="font-bold mb-2">Evolução contínua</h3>
-<p class="text-base text-on-surface-variant px-4">Acompanhamos os resultados e ajustamos a rota enquanto você aplica o conhecimento.</p>
+<h3 class="font-bold text-lg leading-6 mb-2 md:min-h-12 flex items-center justify-center">Evolução contínua</h3>
+<p class="text-base text-on-surface-variant mx-auto">Acompanhamos os resultados e ajustamos a rota enquanto você aplica o conhecimento.</p>
 </li>
 </ol>
 
 <article class="bg-surface-container rounded-3xl p-8 md:p-12 mb-24 flex flex-col md:flex-row gap-12 items-center">
 <div class="flex-1">
-<h3 class="font-headline-md text-32px mb-6 text-primary">Uma história que poderia ser a sua</h3>
+<h3 class="font-headline-md text-[32px] mb-6 text-primary">Uma história que poderia ser a sua</h3>
 <p class="font-body-md text-on-surface-variant mb-4">A Gabriela era uma QA com forte domínio em testes manuais e alguma experiência com Cypress. Ela estava pronta para avançar, mas nas entrevistas esbarrava na falta de visão sobre arquitetura de testes e em como comunicar o valor da qualidade para as lideranças.</p>
 <p class="font-body-md text-on-surface-variant">Durante a Jornada de Evolução, aprofundamos seus conhecimentos em automação e trabalhamos seu posicionamento. Ela aprendeu a desenhar uma estratégia de testes do zero e a apresentá-la. Hoje, Gabriela é a referência técnica do seu squad e lidera a iniciativa de qualidade na empresa.</p>
 </div>
@@ -458,7 +470,7 @@
 <p class="text-on-surface-variant max-w-3xl mx-auto">Conheça os formatos da Mentoria Aurora e encontre o acompanhamento mais adequado para o seu momento profissional.</p>
 </div>
 <div class="mb-24">
-<h3 id="comparacao-jornadas" class="font-headline-md text-24px mb-8 text-center">Qual jornada faz mais sentido para você?</h3>
+<h3 id="comparacao-jornadas" class="font-headline-md text-[24px] mb-8 text-center">Qual jornada faz mais sentido para você?</h3>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:hidden" role="region" aria-labelledby="comparacao-jornadas">
 <article class="bg-surface-white border border-outline-variant rounded-2xl p-6 shadow-sm">
 <h4 class="font-title-lg text-xl font-bold text-primary mb-5">Encontro Estratégico</h4>
@@ -512,7 +524,7 @@
 </div>
 </div>
 
-<h3 class="font-headline-md text-24px mb-8 text-center">Conheça cada jornada</h3>
+<h3 class="font-headline-md text-[24px] mb-8 text-center">Conheça cada jornada</h3>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
 <article class="bg-surface-white border-2 border-outline-variant p-8 rounded-3xl hover:border-primary transition-colors"><h4 class="font-title-lg text-xl font-bold mb-4"><span aria-hidden="true">🎯 </span>Encontro Estratégico</h4><p class="text-on-surface-variant">Uma injeção de clareza para resolver um problema pontual, como revisar currículo e portfólio para uma entrevista ou destravar uma situação específica no trabalho. Inclui a gravação da sessão.</p></article>
 <article class="bg-surface-white border-2 border-outline-variant p-8 rounded-3xl hover:border-tech-teal transition-colors"><h4 class="font-title-lg text-xl font-bold mb-4"><span aria-hidden="true">🚀 </span>Chave de Partida</h4><p class="text-on-surface-variant">O impulso inicial para sair da inércia, organizar um novo aprendizado ou preparar uma entrega. Você recebe um mapa claro dos próximos passos e exercícios práticos focados.</p></article>
@@ -521,7 +533,7 @@
 </div>
 
 <div class="bg-surface-muted rounded-[32px] p-8 md:p-12">
-<h3 class="font-headline-md text-24px mb-8 text-center">Todos os planos incluem</h3>
+<h3 class="font-headline-md text-[24px] mb-8 text-center">Todos os planos incluem</h3>
 <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 <li class="flex items-start gap-3"><span aria-hidden="true" class="material-symbols-outlined text-primary">check_circle</span><span class="font-medium text-sm">Diagnóstico inicial de carreira</span></li>
 <li class="flex items-start gap-3"><span aria-hidden="true" class="material-symbols-outlined text-primary">check_circle</span><span class="font-medium text-sm">Temas 100% personalizados</span></li>
@@ -529,7 +541,7 @@
 <li class="flex items-start gap-3"><span aria-hidden="true" class="material-symbols-outlined text-primary">check_circle</span><span class="font-medium text-sm">Suporte via WhatsApp ou Slack</span></li>
 </ul>
 </div>
-<div class="text-center mt-16 max-w-3xl mx-auto"><h3 class="font-headline-md text-24px mb-4">Mais do que encontros. Uma parceria na sua evolução.</h3><p class="font-body-md text-on-surface-variant mb-8">Nós, Sandra e Daniela, já enfrentamos dúvidas, desafios técnicos e inseguranças sobre o próximo passo. A Mentoria Aurora nasceu para encurtar esse caminho, unindo nossa experiência em estratégia e técnica para formar profissionais que não apenas testam, mas lideram a qualidade.</p></div>
+<div class="text-center mt-16 max-w-3xl mx-auto"><h3 class="font-headline-md text-[24px] mb-4">Mais do que encontros. Uma parceria na sua evolução.</h3><p class="font-body-md text-on-surface-variant mb-8">Nós, Sandra e Daniela, já enfrentamos dúvidas, desafios técnicos e inseguranças sobre o próximo passo. A Mentoria Aurora nasceu para encurtar esse caminho, unindo nossa experiência em estratégia e técnica para formar profissionais que não apenas testam, mas lideram a qualidade.</p></div>
 <div class="text-center mt-8"><h3 class="font-title-lg text-2xl mb-6">Escolha o formato que faz sentido para o seu momento</h3><a href="https://calendly.com/sandrapavan38/vem-conhecer" target="_blank" rel="noopener noreferrer" class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold text-lg pill-shadow transition-all inline-block">Agendar conversa inicial gratuita<span class="sr-only"> (abre em uma nova aba)</span></a></div>
 </div>
 </section>
@@ -549,7 +561,7 @@
 </div>
 <div>
 <span class="font-label-sm text-strategic-purple font-bold mb-2 block tracking-widest uppercase">Estratégia e Negócio</span>
-<h3 class="font-headline-md-mobile text-32px mb-4">Daniela Tawane</h3>
+<h3 class="font-headline-md-mobile text-[32px] mb-4">Daniela Tawane</h3>
 <p class="font-body-md text-on-surface-variant mb-6 leading-relaxed italic">
                                 "Meu foco é transformar o QA em um pilar estratégico que gera valor real para o negócio, indo além da execução e entrando no centro da tomada de decisão."
                             </p>
@@ -572,7 +584,7 @@
 </div>
 <div>
 <span class="font-label-sm text-tech-teal font-bold mb-2 block tracking-widest uppercase">Excelência Técnica</span>
-<h3 class="font-headline-md-mobile text-32px mb-4">Sandra Pavan</h3>
+<h3 class="font-headline-md-mobile text-[32px] mb-4">Sandra Pavan</h3>
 <p class="font-body-md text-on-surface-variant mb-6 leading-relaxed italic">
                                 "A técnica é a nossa fundação. Minha missão é capacitar você com as ferramentas e práticas mais modernas do mercado para garantir produtos robustos."
                             </p>
@@ -624,9 +636,26 @@
 </div>
 </footer>
 <script>
-        // Simple scroll reveal or micro-interactions can go here
-        document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
-            alert('Menu mobile em desenvolvimento. Por favor, utilize a versão desktop para melhor experiência.');
+        const mobileMenuButton = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton?.addEventListener('click', () => {
+            const isOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', String(!isOpen));
+            mobileMenuButton.setAttribute('aria-label', isOpen ? 'Abrir menu de navegação' : 'Fechar menu de navegação');
+            mobileMenu?.classList.toggle('hidden', isOpen);
+            const icon = mobileMenuButton.querySelector('.material-symbols-outlined');
+            if (icon) icon.textContent = isOpen ? 'menu' : 'close';
+        });
+
+        mobileMenu?.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton?.setAttribute('aria-expanded', 'false');
+                mobileMenuButton?.setAttribute('aria-label', 'Abrir menu de navegação');
+                const icon = mobileMenuButton?.querySelector('.material-symbols-outlined');
+                if (icon) icon.textContent = 'menu';
+            });
         });
         
         // Form/CTA Interaction
